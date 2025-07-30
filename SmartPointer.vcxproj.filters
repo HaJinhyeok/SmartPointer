@@ -18,11 +18,11 @@
     <ClCompile Include="Test.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SharedPtr.hpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedPtr.hpp">
+      <Filter>헤더 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
