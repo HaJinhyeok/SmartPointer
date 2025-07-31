@@ -4,14 +4,14 @@ template<class T>
 SharedPtr<T>::SharedPtr(T* ptr)
 	: _ptr(ptr), _block(nullptr)
 {
-	cout << "기본 생성자 호출\n";
+	cout << "SharedPtr 기본 생성자 호출\n";
 	addRef();
 }
 template<class T>
 SharedPtr<T>::SharedPtr(const SharedPtr<T>& sp)
 	:_ptr(sp._ptr), _block(sp._block)
 {
-	cout << "복사 생성자 호출\n";
+	cout << "SharedPtr 복사 생성자 호출\n";
 	addRef();
 }
 template<class T>

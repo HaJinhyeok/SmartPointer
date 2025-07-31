@@ -1,4 +1,15 @@
-#include "SharedPtr.hpp"
+//#include "SharedPtr.hpp"
+//#include "SharedPtr.h"
+#include "WeakPtr.h"
+
+class Test
+{
+public:
+	Test(string name) :_name(name) {};
+	SharedPtr<Test> target;
+private:
+	string _name;
+};
 
 int main()
 {
@@ -11,6 +22,20 @@ int main()
 	{
 		SharedPtr<int> ptr3 = ptr2;
 		cout << "ptr3: " << *ptr3.getPtr() << ", count3: " << ptr3.getCount() << '\n';
+	}
+
+	// 순환 참조
+	{
+		SharedPtr<Test> test1(new Test("test1"));
+		SharedPtr<Test> test2(new Test("test2"));
+		test1->target = test2;
+		test2->target = test1;
+		cout << "test1: " << test1.getCount() << '\n';
+		cout << "test2: " << test2.getCount() << '\n';
+	}
+	// WeakPtr로 순환 참조 해결
+	{
+
 	}
 	return 0;
 }

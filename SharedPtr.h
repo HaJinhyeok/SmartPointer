@@ -43,3 +43,5 @@ private:
 	RefCountBlock* _block;
 };
 
+//#include "SharedPtr.hpp"
+#include "SharedPtr_impl.h"

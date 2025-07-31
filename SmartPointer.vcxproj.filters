@@ -29,5 +29,14 @@
     <ClInclude Include="SharedPtr.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SharedPtr_impl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WeakPtr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WeakPtr_impl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
